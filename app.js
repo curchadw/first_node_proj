@@ -8,7 +8,7 @@ const hostname = "0.0.0.0";
 //declaring the port we'll be listening from
 const port = 8080;
 
-
+//synchornusly reading the html files
 const homePage = fs.readFileSync('main.html')
 const aboutPage = fs.readFileSync('about.html')
 
