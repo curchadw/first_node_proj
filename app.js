@@ -11,6 +11,7 @@ const port = 8080;
 //synchornusly reading the html files
 const homePage = fs.readFileSync('main.html')
 const aboutPage = fs.readFileSync('about.html')
+const css = fs.readFileSync("styles.css");
 
 const server = http.createServer((req,res) =>{
     res.statusCode =200
@@ -22,6 +23,10 @@ const server = http.createServer((req,res) =>{
         res.statusCode = 200
         res.setHeader("Content-Type", "text/html")
         res.write(aboutPage)
+    } else if (req.url == "/styles.css") {
+        res.statusCode = 200;
+        res.setHeader("Content-Type", "text/css");
+        res.write(css);
     }else {
         res.statusCode = 404;
         res.write("404");
