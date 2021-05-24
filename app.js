@@ -11,7 +11,7 @@ const port = 8080;
 //synchornusly reading the html files
 const homePage = fs.readFileSync('main.html')
 const aboutPage = fs.readFileSync('about.html')
-const css = fs.readFileSync("styles.css");
+const css = fs.readFileSync("css/styles.css");
 
 const server = http.createServer((req,res) =>{
     res.statusCode =200

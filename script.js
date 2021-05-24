@@ -6,3 +6,12 @@ const w3_open =()=>{
 const w3_close = () =>{
     document.getElementById('mySidebar').style.display = "none"
 }
+
+const myFunction = ()=> {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  } 
